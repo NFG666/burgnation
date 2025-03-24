@@ -1,53 +1,113 @@
-import React from "react";
-
-const App = () => {
-  return (
-    <div className="bg-gray-50 min-h-screen text-center font-sans">
-      <header className="bg-gradient-to-r from-red-600 to-orange-500 text-white p-8 shadow-lg flex justify-between items-center px-10">
-        <img src="/mnt/data/BurgNation Logo.png" alt="BurgNation Logo" className="h-16" />
-        <div className="text-center">
-          <h1 className="text-5xl font-extrabold">Welcome to BurgNation</h1>
-          <p className="text-xl mt-2 italic">Upstanding Taste!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgNation - Upstanding Taste!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(to right, #e63946, #f77f00);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .call-btn {
+            background-color: white;
+            color: #e63946;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu {
+            padding: 40px;
+        }
+        .menu h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .item:hover {
+            transform: scale(1.05);
+        }
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .item h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #444;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="BurgNation Logo.png" alt="BurgNation Logo">
         </div>
-        <button className="bg-white text-red-600 px-6 py-2 rounded-full font-bold shadow-md hover:bg-gray-200">Call Now</button>
-      </header>
+        <h1>Welcome to BurgNation</h1>
+        <p>Upstanding Taste!</p>
+        <button class="call-btn">Call Now</button>
+    </header>
 
-      <div className="container mx-auto p-8">
-        <h2 className="text-4xl font-semibold mb-8 text-gray-800">Our Menu</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
-            <img
-              src="https://source.unsplash.com/600x400/?burger"
-              alt="BurgNation Special"
-              className="rounded-lg w-full h-60 object-cover"
-            />
-            <h3 className="text-2xl font-bold mt-4">BurgNation Special</h3>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
-            <img
-              src="https://source.unsplash.com/600x400/?cheeseburger"
-              alt="Classic Cheese Burger"
-              className="rounded-lg w-full h-60 object-cover"
-            />
-            <h3 className="text-2xl font-bold mt-4">Classic Cheese Burger</h3>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
-            <img
-              src="https://source.unsplash.com/600x400/?subsandwich"
-              alt="Delicious Sub Sandwich"
-              className="rounded-lg w-full h-60 object-cover"
-            />
-            <h3 className="text-2xl font-bold mt-4">Delicious Sub Sandwich</h3>
-          </div>
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="https://source.unsplash.com/600x400/?burger" alt="BurgNation Special">
+                <h3>BurgNation Special</h3>
+            </div>
+            <div class="item">
+                <img src="https://source.unsplash.com/600x400/?cheeseburger" alt="Classic Cheese Burger">
+                <h3>Classic Cheese Burger</h3>
+            </div>
+            <div class="item">
+                <img src="https://source.unsplash.com/600x400/?subsandwich" alt="Delicious Sub Sandwich">
+                <h3>Delicious Sub Sandwich</h3>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <footer className="bg-gray-800 text-white p-6 mt-10">
-        <p className="text-lg">Contact Us: 123-456-7890 | Visit Us: Downtown Street, Food Plaza</p>
-        <p className="text-sm mt-2">Follow us on social media for the latest updates!</p>
-      </footer>
-    </div>
-  );
-};
-
-export default App;
+    <footer>
+        <p>Contact Us: 123-456-7890 | Visit Us: Downtown Street, Food Plaza</p>
+        <p>Follow us on social media for the latest updates!</p>
+    </footer>
+</body>
+</html>

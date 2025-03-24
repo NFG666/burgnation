@@ -1,0 +1,53 @@
+import React from "react";
+
+const App = () => {
+  return (
+    <div className="bg-gray-50 min-h-screen text-center font-sans">
+      <header className="bg-gradient-to-r from-red-600 to-orange-500 text-white p-8 shadow-lg flex justify-between items-center px-10">
+        <img src="/mnt/data/BurgNation Logo.png" alt="BurgNation Logo" className="h-16" />
+        <div className="text-center">
+          <h1 className="text-5xl font-extrabold">Welcome to BurgNation</h1>
+          <p className="text-xl mt-2 italic">Upstanding Taste!</p>
+        </div>
+        <button className="bg-white text-red-600 px-6 py-2 rounded-full font-bold shadow-md hover:bg-gray-200">Call Now</button>
+      </header>
+
+      <div className="container mx-auto p-8">
+        <h2 className="text-4xl font-semibold mb-8 text-gray-800">Our Menu</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+            <img
+              src="https://source.unsplash.com/600x400/?burger"
+              alt="BurgNation Special"
+              className="rounded-lg w-full h-60 object-cover"
+            />
+            <h3 className="text-2xl font-bold mt-4">BurgNation Special</h3>
+          </div>
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+            <img
+              src="https://source.unsplash.com/600x400/?cheeseburger"
+              alt="Classic Cheese Burger"
+              className="rounded-lg w-full h-60 object-cover"
+            />
+            <h3 className="text-2xl font-bold mt-4">Classic Cheese Burger</h3>
+          </div>
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+            <img
+              src="https://source.unsplash.com/600x400/?subsandwich"
+              alt="Delicious Sub Sandwich"
+              className="rounded-lg w-full h-60 object-cover"
+            />
+            <h3 className="text-2xl font-bold mt-4">Delicious Sub Sandwich</h3>
+          </div>
+        </div>
+      </div>
+
+      <footer className="bg-gray-800 text-white p-6 mt-10">
+        <p className="text-lg">Contact Us: 123-456-7890 | Visit Us: Downtown Street, Food Plaza</p>
+        <p className="text-sm mt-2">Follow us on social media for the latest updates!</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
